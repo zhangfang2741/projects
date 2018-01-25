@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../assets/js/vue.js" type="text/javascript"></script>
+    <script src="../assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <div id="app">
+        {{message}}
+    </div>
+
+    <script type="text/javascript">
+
+        //实例构造器
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: 'hello Vue!'
+            },
+            methods: {
+                add:function(){
+                    this.message="Hello add"
+                }
+            },
+            beforeMount:function(){
+                console.log('3-beforeMount 挂载之前');
+            },
+            mounted:function(){
+                console.log('4-mounted 挂载后');
+                this.message="Hello jqeruy"
+                $("#app").html("Hello Jquery");//这里调用后发现 app.add();更新数据无效，待验证
+            },
+            beforeUpdate:function(){
+                    console.log('5-beforeUpdate 数据更新前');
+            },
+            updated:function(){
+                    //this.message++;
+                    console.log('6-updated 被更新后');
+            }
+        });
+        app.add();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../assets/js/vue.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div id="app">
+           {{message}}
+           <br>
+           <button @click="add">add</button>
+    </div>
+    <script type="text/javascript">
+       Vue.mixin({
+            updated:function(){
+                        console.log('我是全局被混入的');
+                }
+            })
+        //实例构造器
+        var app = new Vue({
+            el: "#app",
+            data:{
+                message:1
+            },
+            methods: {
+                add:function(){
+                    this.message++;
+                }
+            },
+            //生命周期函数
+            beforeCreate:function(){
+                this.message++;
+                console.log('1-beforeCreate 创建之前');
+            },
+            created:function(){
+                
+                console.log('2-created 创建完成');
+            },
+            beforeMount:function(){
+                console.log('3-beforeMount 挂载之前');
+            },
+            mounted:function(){
+                console.log('4-mounted 被创建');
+            },
+            beforeUpdate:function(){
+                console.log('5-beforeUpdate 数据更新前');
+            },
+            updated:function(){
+                //this.message++;
+                console.log('6-updated 被更新后');
+            },
+            activated:function(){
+                console.log('7-activated');
+            },
+            deactivated:function(){
+                console.log('8-deactivated');
+            },
+            beforeDestroy:function(){
+                console.log('9-beforeDestroy 销毁之前');
+            },
+            destroyed:function(){
+                console.log('10-destroyed 销毁之后')
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

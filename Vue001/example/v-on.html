@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../assets/js/vue.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="app">
+        当前分数：
+        <span v-text="score"></span>
+        <div>
+            <button @click="add">+</button>
+            <button @click="plus">-</button>
+        </div>
+        <div>
+            随机分数：
+            <input type="text" @keyup.enter="keyUp" v-model="score2" />
+            <!--<input type="text" @keyup.f="keyUp" v-model="score2" />-->
+        </div>
+    </div>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: "#app",
+            data: {
+                score: 90,
+                score2: 0
+            },
+            methods: {
+                add: function () {
+                    this.score++;
+                },
+                plus: function () {
+                    this.score--;
+                },
+                keyUp: function () {
+                    this.score = this.score + parseInt(this.score2);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
