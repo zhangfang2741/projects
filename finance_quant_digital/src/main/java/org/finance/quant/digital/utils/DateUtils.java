@@ -14,7 +14,7 @@ import java.util.TimeZone;
  * @version : DateUtils.java, v 0.1 2021年05月08日 11:43 上午 hanqing.zf Exp $
  */
 public class DateUtils {
-    private static final String           timeZone   = "Asia/Shanghai";
+    public static final String           TIME_ZONE   = "Asia/Shanghai";
     /**
      * dateformate
      */
@@ -55,16 +55,17 @@ public class DateUtils {
      * @return String
      */
     public static Long getDay(int index) {
-        TimeZone.setDefault(TimeZone.getTimeZone(timeZone));
+        TimeZone.setDefault(TimeZone.getTimeZone(TIME_ZONE));
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DAY_OF_MONTH, index);
         return calendar.getTime().getTime();
     }
 
     public static Long getMinute(int index) {
-        TimeZone.setDefault(TimeZone.getTimeZone(timeZone));
+        TimeZone.setDefault(TimeZone.getTimeZone(TIME_ZONE));
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.MINUTE, index);
         return calendar.getTime().getTime();
     }
+
 }

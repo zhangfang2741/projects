@@ -1,0 +1,490 @@
+2021-07-19 21:13:42 [INFO] - The job has 0 registered types and 0 default Kryo serializers
+2021-07-19 21:13:42 [INFO] - The configuration option Key: 'taskmanager.cpu.cores' , default: null (fallback keys: []) required for local execution is not set, setting it to its default value 1.7976931348623157E308
+2021-07-19 21:13:42 [INFO] - The configuration option Key: 'taskmanager.memory.task.heap.size' , default: null (fallback keys: []) required for local execution is not set, setting it to its default value 9223372036854775807 bytes
+2021-07-19 21:13:42 [INFO] - The configuration option Key: 'taskmanager.memory.task.off-heap.size' , default: 0 bytes (fallback keys: []) required for local execution is not set, setting it to its default value 9223372036854775807 bytes
+2021-07-19 21:13:42 [INFO] - The configuration option Key: 'taskmanager.memory.network.min' , default: 64 mb (fallback keys: [{key=taskmanager.network.memory.min, isDeprecated=true}]) required for local execution is not set, setting it to its default value 64 mb
+2021-07-19 21:13:42 [INFO] - The configuration option Key: 'taskmanager.memory.network.max' , default: 1 gb (fallback keys: [{key=taskmanager.network.memory.max, isDeprecated=true}]) required for local execution is not set, setting it to its default value 64 mb
+2021-07-19 21:13:42 [INFO] - The configuration option Key: 'taskmanager.memory.managed.size' , default: null (fallback keys: [{key=taskmanager.memory.size, isDeprecated=true}]) required for local execution is not set, setting it to its default value 128 mb
+2021-07-19 21:13:42 [INFO] - Starting Flink Mini Cluster
+2021-07-19 21:13:42 [INFO] - Starting Metrics Registry
+2021-07-19 21:13:42 [INFO] - No metrics reporter configured, no metrics will be exposed/reported.
+2021-07-19 21:13:42 [INFO] - Starting RPC Service(s)
+2021-07-19 21:13:43 [INFO] - Slf4jLogger started
+2021-07-19 21:13:43 [INFO] - Trying to start actor system at :0
+2021-07-19 21:13:43 [INFO] - Slf4jLogger started
+2021-07-19 21:13:43 [INFO] - Starting remoting
+2021-07-19 21:13:43 [INFO] - Remoting started; listening on addresses :[akka.tcp://flink-metrics@30.23.252.156:50643]
+2021-07-19 21:13:43 [INFO] - Actor system started at akka.tcp://flink-metrics@30.23.252.156:50643
+2021-07-19 21:13:43 [INFO] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/MetricQueryService .
+2021-07-19 21:13:43 [INFO] - Starting high-availability services
+2021-07-19 21:13:43 [INFO] - Created BLOB server storage directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/blobStore-e4145699-7958-4482-8854-7e001a509eeb
+2021-07-19 21:13:43 [INFO] - Started BLOB server at 0.0.0.0:50644 - max concurrent requests: 50 - max backlog: 1000
+2021-07-19 21:13:43 [INFO] - Created BLOB cache storage directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/blobStore-2469571e-f4a8-4bf5-a756-84ccca79178e
+2021-07-19 21:13:43 [INFO] - Created BLOB cache storage directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/blobStore-7f50dd97-d5fd-48c1-a6f3-f94f3f45611c
+2021-07-19 21:13:43 [INFO] - Starting 1 TaskManger(s)
+2021-07-19 21:13:43 [INFO] - Starting TaskManager with ResourceID: 92d9338f-9fcb-49fe-823e-d673c48bee74
+2021-07-19 21:13:43 [INFO] - Temporary file directory '/var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T': total 232 GB, usable 2 GB (0.86% usable)
+2021-07-19 21:13:43 [INFO] - FileChannelManager uses directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/flink-io-16280b7f-18b8-4501-8b13-4bb6805dcfc0 for spill files.
+2021-07-19 21:13:43 [INFO] - FileChannelManager uses directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/flink-netty-shuffle-15f7709b-f17a-4de4-828f-20d6dbc3e4f9 for spill files.
+2021-07-19 21:13:43 [INFO] - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+2021-07-19 21:13:43 [INFO] - Starting the network environment and its components.
+2021-07-19 21:13:43 [INFO] - Starting the kvState service and its components.
+2021-07-19 21:13:43 [INFO] - Messages have a max timeout of 10000 ms
+2021-07-19 21:13:43 [INFO] - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/taskmanager_0 .
+2021-07-19 21:13:43 [INFO] - Start job leader service.
+2021-07-19 21:13:43 [INFO] - User file cache uses directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/flink-dist-cache-d5ef4154-35f8-436c-a280-b920bd8a40ac
+2021-07-19 21:13:43 [INFO] - Upload directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/flink-web-upload does not exist. 
+2021-07-19 21:13:43 [INFO] - Created directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/flink-web-upload for file uploads.
+2021-07-19 21:13:43 [INFO] - Starting rest endpoint.
+2021-07-19 21:13:44 [WARN] - Log file environment variable 'log.file' is not set.
+2021-07-19 21:13:44 [WARN] - JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'Key: 'web.log.path' , default: null (fallback keys: [{key=jobmanager.web.log.path, isDeprecated=true}])'.
+2021-07-19 21:13:44 [INFO] - Failed to load web based job submission extension. Probable reason: flink-runtime-web is not in the classpath.
+2021-07-19 21:13:44 [INFO] - Rest endpoint listening at localhost:50645
+2021-07-19 21:13:44 [INFO] - Proposing leadership to contender http://localhost:50645
+2021-07-19 21:13:44 [INFO] - http://localhost:50645 was granted leadership with leaderSessionID=c179bfc9-2118-4534-adff-75c74edb8222
+2021-07-19 21:13:44 [INFO] - Received confirmation of leadership for leader http://localhost:50645 , session=c179bfc9-2118-4534-adff-75c74edb8222
+2021-07-19 21:13:44 [INFO] - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/resourcemanager .
+2021-07-19 21:13:44 [INFO] - Proposing leadership to contender LeaderContender: DefaultDispatcherRunner
+2021-07-19 21:13:44 [INFO] - Proposing leadership to contender LeaderContender: StandaloneResourceManager
+2021-07-19 21:13:44 [INFO] - ResourceManager akka://flink/user/resourcemanager was granted leadership with fencing token 829ead1db7b2925b337df37b47ce49db
+2021-07-19 21:13:44 [INFO] - Flink Mini Cluster started successfully
+2021-07-19 21:13:44 [INFO] - Starting the SlotManager.
+2021-07-19 21:13:44 [INFO] - Start SessionDispatcherLeaderProcess.
+2021-07-19 21:13:44 [INFO] - Recover all persisted job graphs.
+2021-07-19 21:13:44 [INFO] - Received confirmation of leadership for leader akka://flink/user/resourcemanager , session=337df37b-47ce-49db-829e-ad1db7b2925b
+2021-07-19 21:13:44 [INFO] - Successfully recovered 0 persisted job graphs.
+2021-07-19 21:13:44 [INFO] - Connecting to ResourceManager akka://flink/user/resourcemanager(829ead1db7b2925b337df37b47ce49db).
+2021-07-19 21:13:44 [INFO] - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/dispatcher .
+2021-07-19 21:13:44 [INFO] - Resolved ResourceManager address, beginning registration
+2021-07-19 21:13:44 [INFO] - Registration at ResourceManager attempt 1 (timeout=100ms)
+2021-07-19 21:13:44 [INFO] - Registering TaskManager with ResourceID 92d9338f-9fcb-49fe-823e-d673c48bee74 (akka://flink/user/taskmanager_0) at ResourceManager
+2021-07-19 21:13:44 [INFO] - Received confirmation of leadership for leader akka://flink/user/dispatcher , session=852b65ec-4b0f-4e04-b866-76c83e922b58
+2021-07-19 21:13:44 [INFO] - Successful registration at resource manager akka://flink/user/resourcemanager under registration id 53c229a5d5310b6ba2f00ce6ebc9c7f8.
+2021-07-19 21:13:44 [INFO] - Received JobGraph submission ec51377e7365d6edb897d40f42cbfb6d (Flink Java Job at Mon Jul 19 21:13:41 CST 2021).
+2021-07-19 21:13:44 [INFO] - Submitting job ec51377e7365d6edb897d40f42cbfb6d (Flink Java Job at Mon Jul 19 21:13:41 CST 2021).
+2021-07-19 21:13:44 [INFO] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at akka://flink/user/jobmanager_1 .
+2021-07-19 21:13:44 [INFO] - Initializing job Flink Java Job at Mon Jul 19 21:13:41 CST 2021 (ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Using restart back off time strategy NoRestartBackoffTimeStrategy for Flink Java Job at Mon Jul 19 21:13:41 CST 2021 (ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Running initialization on master for job Flink Java Job at Mon Jul 19 21:13:41 CST 2021 (ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Successfully ran initialization on master in 3 ms.
+2021-07-19 21:13:44 [INFO] - Start building failover regions.
+2021-07-19 21:13:44 [INFO] - Created 1 failover regions.
+2021-07-19 21:13:44 [INFO] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionStrategy@6a9e7e8b for Flink Java Job at Mon Jul 19 21:13:41 CST 2021 (ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Proposing leadership to contender akka://flink/user/jobmanager_1
+2021-07-19 21:13:44 [INFO] - JobManager runner for job Flink Java Job at Mon Jul 19 21:13:41 CST 2021 (ec51377e7365d6edb897d40f42cbfb6d) was granted leadership with session id edc2d1ff-b079-41f2-b6cf-721c57d3564c at akka://flink/user/jobmanager_1.
+2021-07-19 21:13:44 [INFO] - Starting execution of job Flink Java Job at Mon Jul 19 21:13:41 CST 2021 (ec51377e7365d6edb897d40f42cbfb6d) under job master id b6cf721c57d3564cedc2d1ffb07941f2.
+2021-07-19 21:13:44 [INFO] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.LazyFromSourcesSchedulingStrategy]
+2021-07-19 21:13:44 [INFO] - Job Flink Java Job at Mon Jul 19 21:13:41 CST 2021 (ec51377e7365d6edb897d40f42cbfb6d) switched from state CREATED to RUNNING.
+2021-07-19 21:13:44 [INFO] - CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Cannot serve slot request, no ResourceManager connected. Adding as pending request [SlotRequestId{7c91f3994ed92cc596972ae3c9f42c27}]
+2021-07-19 21:13:44 [INFO] - Received confirmation of leadership for leader akka://flink/user/jobmanager_1 , session=edc2d1ff-b079-41f2-b6cf-721c57d3564c
+2021-07-19 21:13:44 [INFO] - Connecting to ResourceManager akka://flink/user/resourcemanager(829ead1db7b2925b337df37b47ce49db)
+2021-07-19 21:13:44 [INFO] - Resolved ResourceManager address, beginning registration
+2021-07-19 21:13:44 [INFO] - Registration at ResourceManager attempt 1 (timeout=100ms)
+2021-07-19 21:13:44 [INFO] - Registering job manager b6cf721c57d3564cedc2d1ffb07941f2@akka://flink/user/jobmanager_1 for job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Registered job manager b6cf721c57d3564cedc2d1ffb07941f2@akka://flink/user/jobmanager_1 for job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - JobManager successfully registered at ResourceManager, leader id: 829ead1db7b2925b337df37b47ce49db.
+2021-07-19 21:13:44 [INFO] - Requesting new slot [SlotRequestId{7c91f3994ed92cc596972ae3c9f42c27}] and profile ResourceProfile{UNKNOWN} from resource manager.
+2021-07-19 21:13:44 [INFO] - Request slot with profile ResourceProfile{UNKNOWN} for job ec51377e7365d6edb897d40f42cbfb6d with allocation id 49361389d207cdd52ee97a261caa9ce8.
+2021-07-19 21:13:44 [INFO] - Receive slot request 49361389d207cdd52ee97a261caa9ce8 for job ec51377e7365d6edb897d40f42cbfb6d from resource manager with leader id 829ead1db7b2925b337df37b47ce49db.
+2021-07-19 21:13:44 [INFO] - Allocated slot for 49361389d207cdd52ee97a261caa9ce8.
+2021-07-19 21:13:44 [INFO] - Add job ec51377e7365d6edb897d40f42cbfb6d for job leader monitoring.
+2021-07-19 21:13:44 [INFO] - Try to register at job manager akka://flink/user/jobmanager_1 with leader id edc2d1ff-b079-41f2-b6cf-721c57d3564c.
+2021-07-19 21:13:44 [INFO] - Resolved JobManager address, beginning registration
+2021-07-19 21:13:44 [INFO] - Registration at JobManager attempt 1 (timeout=100ms)
+2021-07-19 21:13:44 [INFO] - Successful registration at job manager akka://flink/user/jobmanager_1 for job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Establish JobManager connection for job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Offer reserved slots to the leader of job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Received task CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1).
+2021-07-19 21:13:44 [INFO] - CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Activate slot 49361389d207cdd52ee97a261caa9ce8.
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Registering task at network: CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [WARN] - The operator name DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) exceeded the 80 characters length limit and was truncated.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Requesting new slot [SlotRequestId{a6b3545f26595e3b01af54b1f3885a0d}] and profile ResourceProfile{UNKNOWN} from resource manager.
+2021-07-19 21:13:44 [INFO] - Request slot with profile ResourceProfile{UNKNOWN} for job ec51377e7365d6edb897d40f42cbfb6d with allocation id 95c643eb453c00b6aec1fd283e32fda2.
+2021-07-19 21:13:44 [INFO] - Requesting new slot [SlotRequestId{3c1e0c251220b833f0503859bce4a950}] and profile ResourceProfile{UNKNOWN} from resource manager.
+2021-07-19 21:13:44 [INFO] - Receive slot request 95c643eb453c00b6aec1fd283e32fda2 for job ec51377e7365d6edb897d40f42cbfb6d from resource manager with leader id 829ead1db7b2925b337df37b47ce49db.
+2021-07-19 21:13:44 [INFO] - Request slot with profile ResourceProfile{UNKNOWN} for job ec51377e7365d6edb897d40f42cbfb6d with allocation id 00956e4f130c43621ebbda6fa3ee7eff.
+2021-07-19 21:13:44 [INFO] - Requesting new slot [SlotRequestId{b443363f1384d9f884f0d648e9f66b38}] and profile ResourceProfile{UNKNOWN} from resource manager.
+2021-07-19 21:13:44 [INFO] - Allocated slot for 95c643eb453c00b6aec1fd283e32fda2.
+2021-07-19 21:13:44 [INFO] - Offer reserved slots to the leader of job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Requesting new slot [SlotRequestId{a8ce22aba59020435ad4df4532fce1a5}] and profile ResourceProfile{UNKNOWN} from resource manager.
+2021-07-19 21:13:44 [INFO] - CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Receive slot request 00956e4f130c43621ebbda6fa3ee7eff for job ec51377e7365d6edb897d40f42cbfb6d from resource manager with leader id 829ead1db7b2925b337df37b47ce49db.
+2021-07-19 21:13:44 [INFO] - Request slot with profile ResourceProfile{UNKNOWN} for job ec51377e7365d6edb897d40f42cbfb6d with allocation id 97f178df387ec92fb6bedff9622055a9.
+2021-07-19 21:13:44 [INFO] - Freeing task resources for CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8).
+2021-07-19 21:13:44 [INFO] - Requesting new slot [SlotRequestId{93821aa97e71880c5ed1bf52187f88b8}] and profile ResourceProfile{UNKNOWN} from resource manager.
+2021-07-19 21:13:44 [INFO] - Allocated slot for 00956e4f130c43621ebbda6fa3ee7eff.
+2021-07-19 21:13:44 [INFO] - Offer reserved slots to the leader of job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Request slot with profile ResourceProfile{UNKNOWN} for job ec51377e7365d6edb897d40f42cbfb6d with allocation id 442ed6384f3d6cf66cc83228c75fbea1.
+2021-07-19 21:13:44 [INFO] - Requesting new slot [SlotRequestId{f52b30b13ee53e8e3033edb5ead126d3}] and profile ResourceProfile{UNKNOWN} from resource manager.
+2021-07-19 21:13:44 [INFO] - Receive slot request 97f178df387ec92fb6bedff9622055a9 for job ec51377e7365d6edb897d40f42cbfb6d from resource manager with leader id 829ead1db7b2925b337df37b47ce49db.
+2021-07-19 21:13:44 [INFO] - Request slot with profile ResourceProfile{UNKNOWN} for job ec51377e7365d6edb897d40f42cbfb6d with allocation id 7ac7da37397271d00e2ad8a4fb013928.
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Requesting new slot [SlotRequestId{5a6310830ce13140c5983cf4f876dc96}] and profile ResourceProfile{UNKNOWN} from resource manager.
+2021-07-19 21:13:44 [INFO] - Request slot with profile ResourceProfile{UNKNOWN} for job ec51377e7365d6edb897d40f42cbfb6d with allocation id e49789f97fb31317b9cf0e51abeb96bf.
+2021-07-19 21:13:44 [INFO] - Allocated slot for 97f178df387ec92fb6bedff9622055a9.
+2021-07-19 21:13:44 [INFO] - Offer reserved slots to the leader of job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Receive slot request 442ed6384f3d6cf66cc83228c75fbea1 for job ec51377e7365d6edb897d40f42cbfb6d from resource manager with leader id 829ead1db7b2925b337df37b47ce49db.
+2021-07-19 21:13:44 [INFO] - Deploying Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Request slot with profile ResourceProfile{UNKNOWN} for job ec51377e7365d6edb897d40f42cbfb6d with allocation id 48686bdb3eae1462a8e591545ed10b27.
+2021-07-19 21:13:44 [INFO] - Allocated slot for 442ed6384f3d6cf66cc83228c75fbea1.
+2021-07-19 21:13:44 [INFO] - Offer reserved slots to the leader of job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Receive slot request 7ac7da37397271d00e2ad8a4fb013928 for job ec51377e7365d6edb897d40f42cbfb6d from resource manager with leader id 829ead1db7b2925b337df37b47ce49db.
+2021-07-19 21:13:44 [INFO] - Allocated slot for 7ac7da37397271d00e2ad8a4fb013928.
+2021-07-19 21:13:44 [INFO] - Offer reserved slots to the leader of job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Receive slot request e49789f97fb31317b9cf0e51abeb96bf for job ec51377e7365d6edb897d40f42cbfb6d from resource manager with leader id 829ead1db7b2925b337df37b47ce49db.
+2021-07-19 21:13:44 [INFO] - Allocated slot for e49789f97fb31317b9cf0e51abeb96bf.
+2021-07-19 21:13:44 [INFO] - Offer reserved slots to the leader of job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) 7f5c5b8c7fbdd59dcaead36529df7db8.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [95c643eb453c00b6aec1fd283e32fda2]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [00956e4f130c43621ebbda6fa3ee7eff]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [95c643eb453c00b6aec1fd283e32fda2]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [00956e4f130c43621ebbda6fa3ee7eff]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [97f178df387ec92fb6bedff9622055a9]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [95c643eb453c00b6aec1fd283e32fda2]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [00956e4f130c43621ebbda6fa3ee7eff]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [97f178df387ec92fb6bedff9622055a9]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [442ed6384f3d6cf66cc83228c75fbea1]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [95c643eb453c00b6aec1fd283e32fda2]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [00956e4f130c43621ebbda6fa3ee7eff]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [97f178df387ec92fb6bedff9622055a9]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [442ed6384f3d6cf66cc83228c75fbea1]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [7ac7da37397271d00e2ad8a4fb013928]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [95c643eb453c00b6aec1fd283e32fda2]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Receive slot request 48686bdb3eae1462a8e591545ed10b27 for job ec51377e7365d6edb897d40f42cbfb6d from resource manager with leader id 829ead1db7b2925b337df37b47ce49db.
+2021-07-19 21:13:44 [INFO] - Allocated slot for 48686bdb3eae1462a8e591545ed10b27.
+2021-07-19 21:13:44 [INFO] - Offer reserved slots to the leader of job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - CHAIN DataSource (at main(WordWithCount.java:15) (org.apache.flink.api.java.io.CollectionInputFormat)) -> FlatMap (FlatMap at main(WordWithCount.java:21)) -> Combine (SUM(1), at main(WordWithCount.java:23) (1/1) (7f5c5b8c7fbdd59dcaead36529df7db8) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [e49789f97fb31317b9cf0e51abeb96bf]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [00956e4f130c43621ebbda6fa3ee7eff]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [97f178df387ec92fb6bedff9622055a9]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [442ed6384f3d6cf66cc83228c75fbea1]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [7ac7da37397271d00e2ad8a4fb013928]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Received repeated offer for slot [95c643eb453c00b6aec1fd283e32fda2]. Ignoring.
+2021-07-19 21:13:44 [INFO] - Received task Reduce (SUM(1), at main(WordWithCount.java:23) (1/8).
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Registering task at network: Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Received task Reduce (SUM(1), at main(WordWithCount.java:23) (2/8).
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Activate slot 95c643eb453c00b6aec1fd283e32fda2.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Registering task at network: Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Received task Reduce (SUM(1), at main(WordWithCount.java:23) (3/8).
+2021-07-19 21:13:44 [INFO] - Activate slot 00956e4f130c43621ebbda6fa3ee7eff.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Activate slot 95c643eb453c00b6aec1fd283e32fda2.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Registering task at network: Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Received task Reduce (SUM(1), at main(WordWithCount.java:23) (4/8).
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Activate slot 00956e4f130c43621ebbda6fa3ee7eff.
+2021-07-19 21:13:44 [INFO] - Activate slot 97f178df387ec92fb6bedff9622055a9.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Activate slot 95c643eb453c00b6aec1fd283e32fda2.
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Registering task at network: Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Received task Reduce (SUM(1), at main(WordWithCount.java:23) (5/8).
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Activate slot 00956e4f130c43621ebbda6fa3ee7eff.
+2021-07-19 21:13:44 [INFO] - Activate slot 97f178df387ec92fb6bedff9622055a9.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Activate slot 442ed6384f3d6cf66cc83228c75fbea1.
+2021-07-19 21:13:44 [INFO] - Activate slot 95c643eb453c00b6aec1fd283e32fda2.
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Registering task at network: Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Received task Reduce (SUM(1), at main(WordWithCount.java:23) (6/8).
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Activate slot 00956e4f130c43621ebbda6fa3ee7eff.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Activate slot 97f178df387ec92fb6bedff9622055a9.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Activate slot 442ed6384f3d6cf66cc83228c75fbea1.
+2021-07-19 21:13:44 [INFO] - Activate slot 7ac7da37397271d00e2ad8a4fb013928.
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Activate slot 95c643eb453c00b6aec1fd283e32fda2.
+2021-07-19 21:13:44 [INFO] - Registering task at network: Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Received task Reduce (SUM(1), at main(WordWithCount.java:23) (7/8).
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Activate slot e49789f97fb31317b9cf0e51abeb96bf.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Activate slot 00956e4f130c43621ebbda6fa3ee7eff.
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Activate slot 97f178df387ec92fb6bedff9622055a9.
+2021-07-19 21:13:44 [INFO] - Activate slot 442ed6384f3d6cf66cc83228c75fbea1.
+2021-07-19 21:13:44 [INFO] - Activate slot 7ac7da37397271d00e2ad8a4fb013928.
+2021-07-19 21:13:44 [INFO] - Activate slot 95c643eb453c00b6aec1fd283e32fda2.
+2021-07-19 21:13:44 [INFO] - Registering task at network: Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Received task Reduce (SUM(1), at main(WordWithCount.java:23) (8/8).
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Activate slot e49789f97fb31317b9cf0e51abeb96bf.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Activate slot 00956e4f130c43621ebbda6fa3ee7eff.
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Activate slot 97f178df387ec92fb6bedff9622055a9.
+2021-07-19 21:13:44 [INFO] - Activate slot 442ed6384f3d6cf66cc83228c75fbea1.
+2021-07-19 21:13:44 [INFO] - Activate slot 7ac7da37397271d00e2ad8a4fb013928.
+2021-07-19 21:13:44 [INFO] - Activate slot 48686bdb3eae1462a8e591545ed10b27.
+2021-07-19 21:13:44 [INFO] - Activate slot 95c643eb453c00b6aec1fd283e32fda2.
+2021-07-19 21:13:44 [INFO] - Registering task at network: Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Freeing task resources for Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e).
+2021-07-19 21:13:44 [INFO] - Freeing task resources for Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc).
+2021-07-19 21:13:44 [INFO] - Freeing task resources for Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44).
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) 707bd5ef4f977c4807b1aca7311d92dc.
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Freeing task resources for Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330).
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Freeing task resources for Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3).
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Freeing task resources for Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc).
+2021-07-19 21:13:44 [INFO] - Freeing task resources for Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb).
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) fca7b04da1c9f3c9da290a099573413e.
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Freeing task resources for Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4).
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Deploying DataSink (collect()) (1/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) 814795c728d3850e1b61d7fe01688e44.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) 1623982273a6083b9139162590253330.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) 8788d73ea387eb8db7ae44ce37bf34c3.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) 2e13edcabbef48fd7439b099ac286cdb.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying DataSink (collect()) (7/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) fbb349b5b0ffdcac5820d3259a1913bc.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) 00f423b1cff01c15b14a9a4aa922f4b4.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying DataSink (collect()) (8/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying DataSink (collect()) (2/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying DataSink (collect()) (6/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Received task DataSink (collect()) (1/8).
+2021-07-19 21:13:44 [INFO] - Deploying DataSink (collect()) (4/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying DataSink (collect()) (5/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) switched from CREATED to SCHEDULED.
+2021-07-19 21:13:44 [INFO] - Registering task at network: DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) switched from SCHEDULED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Deploying DataSink (collect()) (3/8) (attempt #0) to 92d9338f-9fcb-49fe-823e-d673c48bee74 @ localhost (dataPort=-1)
+2021-07-19 21:13:44 [INFO] - Received task DataSink (collect()) (7/8).
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (5/8) (707bd5ef4f977c4807b1aca7311d92dc) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Registering task at network: DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Received task DataSink (collect()) (8/8).
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (4/8) (fca7b04da1c9f3c9da290a099573413e) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Registering task at network: DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Freeing task resources for DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30).
+2021-07-19 21:13:44 [INFO] - Freeing task resources for DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9).
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (3/8) (814795c728d3850e1b61d7fe01688e44) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (6/8) (1623982273a6083b9139162590253330) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Freeing task resources for DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace).
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Received task DataSink (collect()) (2/8).
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (8/8) (8788d73ea387eb8db7ae44ce37bf34c3) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (1/8) (2e13edcabbef48fd7439b099ac286cdb) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Registering task at network: DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (2/8) (fbb349b5b0ffdcac5820d3259a1913bc) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Received task DataSink (collect()) (6/8).
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Reduce (SUM(1), at main(WordWithCount.java:23) (7/8) (00f423b1cff01c15b14a9a4aa922f4b4) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Freeing task resources for DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d).
+2021-07-19 21:13:44 [INFO] - Registering task at network: DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) [FINISHED]
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Received task DataSink (collect()) (4/8).
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Freeing task resources for DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8).
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) [FINISHED]
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Registering task at network: DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Received task DataSink (collect()) (5/8).
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Freeing task resources for DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67).
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Registering task at network: DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - Received task DataSink (collect()) (3/8).
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Freeing task resources for DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d).
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) switched from CREATED to DEPLOYING.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (7/8) 9cfefa209597500def82c163af85cf30.
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Creating FileSystem stream leak safety net for task DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) [DEPLOYING]
+2021-07-19 21:13:44 [INFO] - Loading JAR files for task DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (1/8) 8451b38a8b9b3d21a063d47c702817d9.
+2021-07-19 21:13:44 [INFO] - Registering task at network: DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) [DEPLOYING].
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (7/8) (9cfefa209597500def82c163af85cf30) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (8/8) 9f5495c6114b3a3113f58b597ce68ace.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (2/8) 252029bb943c7e1d898463dcb4dad41d.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (6/8) 811397f9dd69784a3e317394412407a8.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Freeing task resources for DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313).
+2021-07-19 21:13:44 [INFO] - Ensuring all FileSystem streams are closed for task DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) [FINISHED]
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (4/8) 0a3ee0f1250ee386c457e29830aebf67.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (5/8) 14eeae6269ae8ac26aaeabad746aa90d.
+2021-07-19 21:13:44 [INFO] - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (3/8) 94f745eca149f3a55890887436a6a313.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (1/8) (8451b38a8b9b3d21a063d47c702817d9) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) switched from DEPLOYING to RUNNING.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (8/8) (9f5495c6114b3a3113f58b597ce68ace) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (2/8) (252029bb943c7e1d898463dcb4dad41d) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (6/8) (811397f9dd69784a3e317394412407a8) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (4/8) (0a3ee0f1250ee386c457e29830aebf67) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (5/8) (14eeae6269ae8ac26aaeabad746aa90d) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - DataSink (collect()) (3/8) (94f745eca149f3a55890887436a6a313) switched from RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Job Flink Java Job at Mon Jul 19 21:13:41 CST 2021 (ec51377e7365d6edb897d40f42cbfb6d) switched from state RUNNING to FINISHED.
+2021-07-19 21:13:44 [INFO] - Shutting down Flink Mini Cluster
+2021-07-19 21:13:44 [INFO] - Shutting down rest endpoint.
+2021-07-19 21:13:44 [INFO] - Job ec51377e7365d6edb897d40f42cbfb6d reached globally terminal state FINISHED.
+2021-07-19 21:13:44 [INFO] - Stopping TaskExecutor akka://flink/user/taskmanager_0.
+2021-07-19 21:13:44 [INFO] - Close ResourceManager connection 22b6da44172645911c62cbf0a4886082.
+2021-07-19 21:13:44 [INFO] - Closing TaskExecutor connection 92d9338f-9fcb-49fe-823e-d673c48bee74 because: The TaskExecutor is shutting down.
+2021-07-19 21:13:44 [INFO] - Free slot TaskSlot(index:0, state:ACTIVE, resource profile: ResourceProfile{managedMemory=16.000mb (16777216 bytes), networkMemory=8.000mb (8388608 bytes)}, allocationId: 49361389d207cdd52ee97a261caa9ce8, jobId: ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Stopping the JobMaster for job Flink Java Job at Mon Jul 19 21:13:41 CST 2021(ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Suspending SlotPool.
+2021-07-19 21:13:44 [INFO] - Close ResourceManager connection 22b6da44172645911c62cbf0a4886082: JobManager is shutting down..
+2021-07-19 21:13:44 [INFO] - Stopping SlotPool.
+2021-07-19 21:13:44 [INFO] - Disconnect job manager b6cf721c57d3564cedc2d1ffb07941f2@akka://flink/user/jobmanager_1 for job ec51377e7365d6edb897d40f42cbfb6d from the resource manager.
+2021-07-19 21:13:44 [INFO] - Free slot TaskSlot(index:6, state:ACTIVE, resource profile: ResourceProfile{managedMemory=16.000mb (16777216 bytes), networkMemory=8.000mb (8388608 bytes)}, allocationId: e49789f97fb31317b9cf0e51abeb96bf, jobId: ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Free slot TaskSlot(index:2, state:ACTIVE, resource profile: ResourceProfile{managedMemory=16.000mb (16777216 bytes), networkMemory=8.000mb (8388608 bytes)}, allocationId: 00956e4f130c43621ebbda6fa3ee7eff, jobId: ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Free slot TaskSlot(index:3, state:ACTIVE, resource profile: ResourceProfile{managedMemory=16.000mb (16777216 bytes), networkMemory=8.000mb (8388608 bytes)}, allocationId: 97f178df387ec92fb6bedff9622055a9, jobId: ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Free slot TaskSlot(index:4, state:ACTIVE, resource profile: ResourceProfile{managedMemory=16.000mb (16777216 bytes), networkMemory=8.000mb (8388608 bytes)}, allocationId: 442ed6384f3d6cf66cc83228c75fbea1, jobId: ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Free slot TaskSlot(index:5, state:ACTIVE, resource profile: ResourceProfile{managedMemory=16.000mb (16777216 bytes), networkMemory=8.000mb (8388608 bytes)}, allocationId: 7ac7da37397271d00e2ad8a4fb013928, jobId: ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Free slot TaskSlot(index:7, state:ACTIVE, resource profile: ResourceProfile{managedMemory=16.000mb (16777216 bytes), networkMemory=8.000mb (8388608 bytes)}, allocationId: 48686bdb3eae1462a8e591545ed10b27, jobId: ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - Free slot TaskSlot(index:1, state:ACTIVE, resource profile: ResourceProfile{managedMemory=16.000mb (16777216 bytes), networkMemory=8.000mb (8388608 bytes)}, allocationId: 95c643eb453c00b6aec1fd283e32fda2, jobId: ec51377e7365d6edb897d40f42cbfb6d).
+2021-07-19 21:13:44 [INFO] - JobManager for job ec51377e7365d6edb897d40f42cbfb6d with leader id b6cf721c57d3564cedc2d1ffb07941f2 lost leadership.
+2021-07-19 21:13:44 [INFO] - Removing cache directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/flink-web-ui
+2021-07-19 21:13:44 [INFO] - Shut down complete.
+2021-07-19 21:13:44 [INFO] - Shut down cluster because application is in CANCELED, diagnostics DispatcherResourceManagerComponent has been closed..
+2021-07-19 21:13:44 [INFO] - Closing components.
+2021-07-19 21:13:44 [INFO] - Stopping SessionDispatcherLeaderProcess.
+2021-07-19 21:13:44 [INFO] - Close JobManager connection for job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Stopping dispatcher akka://flink/user/dispatcher.
+2021-07-19 21:13:44 [INFO] - Stopping all currently running jobs of dispatcher akka://flink/user/dispatcher.
+2021-07-19 21:13:44 [INFO] - Shutting down back pressure request coordinator.
+2021-07-19 21:13:44 [INFO] - Stopped dispatcher akka://flink/user/dispatcher.
+2021-07-19 21:13:44 [INFO] - Closing the SlotManager.
+2021-07-19 21:13:44 [INFO] - Suspending the SlotManager.
+2021-07-19 21:13:44 [INFO] - Close JobManager connection for job ec51377e7365d6edb897d40f42cbfb6d.
+2021-07-19 21:13:44 [INFO] - Stop job leader service.
+2021-07-19 21:13:44 [INFO] - Shutting down TaskExecutorLocalStateStoresManager.
+2021-07-19 21:13:44 [INFO] - FileChannelManager removed spill file directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/flink-io-16280b7f-18b8-4501-8b13-4bb6805dcfc0
+2021-07-19 21:13:44 [INFO] - Shutting down the network environment and its components.
+2021-07-19 21:13:44 [INFO] - FileChannelManager removed spill file directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/flink-netty-shuffle-15f7709b-f17a-4de4-828f-20d6dbc3e4f9
+2021-07-19 21:13:44 [INFO] - Shutting down the kvState service and its components.
+2021-07-19 21:13:44 [INFO] - Stop job leader service.
+2021-07-19 21:13:44 [INFO] - removed file cache directory /var/folders/ym/grbwhmb50cs12n5rf1znkfgh0000gp/T/flink-dist-cache-d5ef4154-35f8-436c-a280-b920bd8a40ac
+2021-07-19 21:13:44 [INFO] - Stopped TaskExecutor akka://flink/user/taskmanager_0.
+2021-07-19 21:13:44 [INFO] - Stopping Akka RPC service.
+2021-07-19 21:13:44 [INFO] - Shutting down remote daemon.
+2021-07-19 21:13:44 [INFO] - Remote daemon shut down; proceeding with flushing remote transports.
+2021-07-19 21:13:44 [INFO] - Remoting shut down.
+2021-07-19 21:13:44 [INFO] - Stopping Akka RPC service.
+2021-07-19 21:13:44 [INFO] - Stopped Akka RPC service.
+2021-07-19 21:13:44 [INFO] - Shutting down BLOB cache
+2021-07-19 21:13:44 [INFO] - Shutting down BLOB cache
+2021-07-19 21:13:44 [INFO] - Stopped BLOB server at 0.0.0.0:50644
+2021-07-19 21:13:44 [INFO] - Stopped Akka RPC service.

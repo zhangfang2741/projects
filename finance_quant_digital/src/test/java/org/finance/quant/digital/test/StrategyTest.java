@@ -10,6 +10,8 @@ import org.finance.quant.digital.enums.AssetsEnum;
 import org.finance.quant.digital.service.DigitalContractTradeService;
 import org.finance.quant.digital.strategy.FinanceSarStrategy;
 import org.finance.quant.digital.strategy.FinanceMultipleStrategy;
+import org.finance.quant.digital.strategy.FinanceTa4jSarStrategy;
+import org.finance.quant.digital.strategy.FinanceTa4jStrategy;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * @author hanqing.zf
- * @version : StrategyTest.java, v 0.1 2021Äê05ÔÂ11ÈÕ 1:31 ÏÂÎç hanqing.zf Exp $
+ * @version : StrategyTest.java, v 0.1 2021ï¿½ï¿½05ï¿½ï¿½11ï¿½ï¿½ 1:31 ï¿½ï¿½ï¿½ï¿½ hanqing.zf Exp $
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -26,9 +28,13 @@ public class StrategyTest {
     @Autowired
     private DigitalContractTradeService digitalContractTradeService;
     @Autowired
-    private FinanceSarStrategy          financeSarStrategy;
+    private FinanceSarStrategy financeSarStrategy;
     @Autowired
-    private FinanceMultipleStrategy     financeMultipleStrategy;
+    private FinanceMultipleStrategy financeMultipleStrategy;
+    @Autowired
+    private FinanceTa4jStrategy financeTa4jStrategy;
+    @Autowired
+    private FinanceTa4jSarStrategy financeTa4jSarStrategy;
 
     @Test
     public void test1() throws InterruptedException {
@@ -47,4 +53,14 @@ public class StrategyTest {
         Thread.sleep(Integer.MAX_VALUE);
     }
 
+    @Test
+    public void test4() throws InterruptedException {
+        financeTa4jStrategy.execute(AssetsEnum.USDT, AssetsEnum.BTC);
+        Thread.sleep(Integer.MAX_VALUE);
+    }
+
+    @Test
+    public void test5() throws InterruptedException {
+        financeTa4jSarStrategy.execute(AssetsEnum.USDT, AssetsEnum.BTC);
+    }
 }

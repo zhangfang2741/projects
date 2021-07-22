@@ -26,10 +26,10 @@ import java.util.concurrent.TimeUnit;
  * @version : FinanceWmaStrategy.java, v 0.1 2021年06月13日 4:20 下午 hanqing.zf Exp $
  */
 @Service
-public class FinanceMultipleStrategy extends BaseStrategy {
-    private static final Logger                   LOGGER = Logger.getLogger(FinanceMultipleStrategy.class);
+public class FinanceMultipleStrategy extends FinanceBaseStrategy {
+    private static final Logger LOGGER = Logger.getLogger(FinanceMultipleStrategy.class);
     @Autowired
-    private              DigitalGoodsTradeService digitalGoodsTradeService;
+    private DigitalGoodsTradeService digitalGoodsTradeService;
 
     /**
      * 综合策略
@@ -66,7 +66,7 @@ public class FinanceMultipleStrategy extends BaseStrategy {
              */
             sell(candlesticks, currency, goods);
 
-        }, 0, 2, TimeUnit.SECONDS);
+        }, 0, 1, TimeUnit.SECONDS);
     }
 
     /**
@@ -98,7 +98,7 @@ public class FinanceMultipleStrategy extends BaseStrategy {
         double[] wma25 = TaLibUtils.ma(inClose, 25);
 
         //4、Sar 点在股价下方
-        if (sar[sar.length - 1] < price && sar[sar.length - 2] >= price) {
+        if (sar[sar.length - 2] < price && sar[sar.length - 3] >= price) {
             double free = digitalGoodsTradeService.assetBanlance(currency.name(), 6);
             //计算最大买入量
             double quantity = new BigDecimal(free / price).setScale(6, RoundingMode.DOWN)
@@ -139,7 +139,7 @@ public class FinanceMultipleStrategy extends BaseStrategy {
         double[] wma25 = TaLibUtils.ma(inClose, 25);
 
         //4、Sar 点在股价上方 and 7分线wma在25分线wma下方 and 股价跌破7分线wma
-        if (sar[sar.length - 1] > price || wma7[wma7.length - 1] < wma7[wma7.length - 2]-20) {
+        if (sar[sar.length - 1] > price) {
             double free = digitalGoodsTradeService.assetBanlance(goods.name(), 6);
             String symbol = goods.name() + currency.name();
             digitalGoodsTradeService.trade(symbol, OrderSide.SELL, free);

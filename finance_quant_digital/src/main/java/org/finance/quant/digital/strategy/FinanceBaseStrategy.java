@@ -13,7 +13,7 @@ import java.util.concurrent.ScheduledExecutorService;
  * @author hanqing.zf
  * @version : BaseStrategy.java, v 0.1 2021年05月11日 9:51 上午 hanqing.zf Exp $
  */
-public abstract class BaseStrategy {
+public abstract class FinanceBaseStrategy {
     /**
      * init Scheduled Executor
      */

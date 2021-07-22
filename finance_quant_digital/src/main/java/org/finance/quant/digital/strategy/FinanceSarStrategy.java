@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
  * @version : FinanceQuotaStrategy.java, v 0.1 2021年05月11日 9:34 上午 hanqing.zf Exp $
  */
 @Service
-public class FinanceSarStrategy extends BaseStrategy {
+public class FinanceSarStrategy extends FinanceBaseStrategy {
     private static final Logger                   LOGGER = Logger.getLogger(FinanceSarStrategy.class);
     @Autowired
     private              DigitalGoodsTradeService digitalGoodsTradeService;

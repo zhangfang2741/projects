@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
  * @version : FinanceGridStrategy.java, v 0.1 2021年05月11日 9:54 上午 hanqing.zf Exp $
  */
 @Service
-public class FinanceGridStrategy extends BaseStrategy {
+public class FinanceGridStrategy extends FinanceBaseStrategy {
     private static final Logger                   LOGGER = Logger.getLogger(FinanceGridStrategy.class);
     @Autowired
     private              DigitalGoodsTradeService digitalGoodsTradeService;
