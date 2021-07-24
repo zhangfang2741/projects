@@ -121,12 +121,12 @@
         <dependency>
             <groupId>org.ta4j</groupId>
             <artifactId>ta4j-core</artifactId>
-            <version>0.14</version>
+            <version>0.13</version>
         </dependency>
         <dependency>
             <groupId>org.ta4j</groupId>
             <artifactId>ta4j-examples</artifactId>
-            <version>0.14</version>
+            <version>0.13</version>
         </dependency>
         <!-- Apache Flink dependencies -->
         <!-- These dependencies are provided, because they should not be packaged into the JAR file. -->
@@ -142,7 +142,11 @@
             <version>${flink.version}</version>
             <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>1.0.17</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -11,9 +11,10 @@ import org.springframework.stereotype.Service;
 import org.ta4j.core.*;
 import org.ta4j.core.indicators.SMAIndicator;
 import org.ta4j.core.indicators.helpers.ClosePriceIndicator;
-import org.ta4j.core.num.DecimalNum;
-import org.ta4j.core.rules.CrossedDownIndicatorRule;
-import org.ta4j.core.rules.CrossedUpIndicatorRule;
+import org.ta4j.core.num.DoubleNum;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.trading.rules.CrossedDownIndicatorRule;
+import org.ta4j.core.trading.rules.CrossedUpIndicatorRule;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -63,18 +64,18 @@ public class FinanceTa4jStrategy extends FinanceBaseStrategy {
             if (strategy.shouldEnter(endIndex)) {
                 // Our strategy should enter
                 System.out.println("Strategy should ENTER on " + endIndex);
-                boolean entered = tradingRecord.enter(endIndex, series.getLastBar().getClosePrice(), DecimalNum.valueOf(10));
+                boolean entered = tradingRecord.enter(endIndex, series.getLastBar().getClosePrice(), DoubleNum.valueOf(10));
                 if (entered) {
-                    Trade entry = tradingRecord.getLastEntry();
+                    Order entry = tradingRecord.getLastEntry();
                     System.out.println("Entered on " + entry.getIndex() + " (price=" + entry.getNetPrice().doubleValue()
                             + ", amount=" + entry.getAmount().doubleValue() + ")");
                 }
             } else if (strategy.shouldExit(endIndex)) {
                 // Our strategy should exit
                 System.out.println("Strategy should EXIT on " + endIndex);
-                boolean exited = tradingRecord.exit(endIndex, series.getLastBar().getClosePrice(), DecimalNum.valueOf(10));
+                boolean exited = tradingRecord.exit(endIndex, series.getLastBar().getClosePrice(), DoubleNum.valueOf(10));
                 if (exited) {
-                    Trade exit = tradingRecord.getLastExit();
+                    Order exit = tradingRecord.getLastExit();
                     System.out.println("Exited on " + exit.getIndex() + " (price=" + exit.getNetPrice().doubleValue()
                             + ", amount=" + exit.getAmount().doubleValue() + ")");
                 }

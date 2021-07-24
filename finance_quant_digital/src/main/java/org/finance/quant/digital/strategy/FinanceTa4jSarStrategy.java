@@ -7,17 +7,23 @@ import com.binance.api.client.domain.market.Candlestick;
 import com.binance.api.client.domain.market.CandlestickInterval;
 import org.apache.log4j.Logger;
 import org.finance.quant.digital.enums.AssetsEnum;
+import org.finance.quant.digital.enums.ExecModeEnum;
 import org.finance.quant.digital.service.DigitalGoodsTradeService;
 import org.finance.quant.digital.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.ta4j.core.*;
+import org.ta4j.core.analysis.criteria.TotalProfitCriterion;
+import org.ta4j.core.cost.CostModel;
+import org.ta4j.core.cost.LinearBorrowingCostModel;
+import org.ta4j.core.cost.LinearTransactionCostModel;
 import org.ta4j.core.indicators.ParabolicSarIndicator;
 import org.ta4j.core.indicators.SMAIndicator;
 import org.ta4j.core.indicators.helpers.ClosePriceIndicator;
-import org.ta4j.core.rules.AndRule;
-import org.ta4j.core.rules.CrossedDownIndicatorRule;
-import org.ta4j.core.rules.CrossedUpIndicatorRule;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.trading.rules.CrossedDownIndicatorRule;
+import org.ta4j.core.trading.rules.CrossedUpIndicatorRule;
+import org.ta4j.core.trading.rules.OrRule;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -30,10 +36,12 @@ import java.util.List;
 @Service
 public class FinanceTa4jSarStrategy extends FinanceBaseStrategy {
     private static final Logger LOGGER = Logger.getLogger(FinanceTa4jSarStrategy.class);
-
+    /**
+     * 策略运行模式
+     */
+    private ExecModeEnum execMode = ExecModeEnum.Back_Testing;
     @Autowired
     private DigitalGoodsTradeService digitalGoodsTradeService;
-
 
     @Override
     public void execute(AssetsEnum currency, AssetsEnum goods) {
@@ -43,22 +51,35 @@ public class FinanceTa4jSarStrategy extends FinanceBaseStrategy {
             try {
                 Long currentTime = new Date().getTime();
                 //2天前：-2天*24小时*60分钟*60秒*1000毫秒
-                Long startTime = currentTime - 2 * 24 * 60 * 60 * 1000L;
+                Long startTime = currentTime - 365 * 24 * 60 * 60 * 1000L;
                 List<Candlestick> candlesticks = client.getCandlestickBars(symbol, CandlestickInterval.HOURLY, Integer.MAX_VALUE, startTime, currentTime);
                 //构建BarSeries
                 BarSeries series = buildBarSeries(candlesticks);
                 //构建Strategy
                 Strategy strategy = buildStrategy(series);
-                Candlestick candlestick = candlesticks.get(series.getEndIndex());
-                LOGGER.info("[" + DateUtils.format(new Date(candlestick.getOpenTime())) + "]开始处理candlestick:" + JSON.toJSONString(candlestick));
-                if (strategy.shouldEnter(series.getEndIndex())) {
-                    //满足买入条件
-                    buy(candlestick, currency, goods);
-                } else if (strategy.shouldExit(series.getEndIndex())) {
-                    //满足卖出条件
-                    sell(candlestick, currency, goods);
+                if (execMode == ExecModeEnum.Back_Testing) {
+                    // Setting the trading cost models
+                    CostModel transactionCostModel = new LinearTransactionCostModel(0.0005);
+                    CostModel borrowingCostModel = new LinearBorrowingCostModel(0.00001);
+                    BarSeriesManager manager = new BarSeriesManager(series, transactionCostModel, borrowingCostModel);
+                    TradingRecord tradingRecord = manager.run(strategy);
+                    AnalysisCriterion criterion = new TotalProfitCriterion();
+                    Num profit = criterion.calculate(series, tradingRecord);
+                    LOGGER.info("AnalysisCriterion of trades for our strategy: " + profit);
+//                    JfreeChartUtils.chart(series, tradingRecord);
+//                    Thread.sleep(Integer.MAX_VALUE);
+                } else {
+                    Candlestick candlestick = candlesticks.get(series.getEndIndex());
+                    LOGGER.info("[" + DateUtils.format(new Date(candlestick.getOpenTime())) + "]开始处理candlestick:" + JSON.toJSONString(candlestick));
+                    if (strategy.shouldEnter(series.getEndIndex())) {
+                        //满足买入条件
+                        buy(candlestick, currency, goods);
+                    } else if (strategy.shouldExit(series.getEndIndex())) {
+                        //满足卖出条件
+                        sell(candlestick, currency, goods);
+                    }
+                    Thread.sleep(10 * 1000l);
                 }
-                Thread.sleep(10 * 1000l);
             } catch (Exception e) {
                 LOGGER.error("FinanceTa4jSarStrategy execute exception!", e);
             }
@@ -73,17 +94,18 @@ public class FinanceTa4jSarStrategy extends FinanceBaseStrategy {
      */
     private Strategy buildStrategy(BarSeries series) {
         ClosePriceIndicator closePriceIndicator = new ClosePriceIndicator(series);
-        //买入策略
-        SMAIndicator sma5 = new SMAIndicator(closePriceIndicator, 5);
-        SMAIndicator sma60 = new SMAIndicator(closePriceIndicator, 60);
+        //计算指标
+        SMAIndicator sma7 = new SMAIndicator(closePriceIndicator, 7);
+        SMAIndicator sma25 = new SMAIndicator(closePriceIndicator, 25);
         ParabolicSarIndicator parabolicSarIndicator = new ParabolicSarIndicator(series);
-        CrossedUpIndicatorRule sarCrossClosePrice = new CrossedUpIndicatorRule(parabolicSarIndicator, closePriceIndicator);
-        CrossedUpIndicatorRule sma5CrossSma60 = new CrossedUpIndicatorRule(sma5, sma60);
-        Rule buyingRule = new AndRule(sarCrossClosePrice, sma5CrossSma60);
-        //卖出策略
+        //买入策略
         CrossedDownIndicatorRule sarDownClosePrice = new CrossedDownIndicatorRule(parabolicSarIndicator, closePriceIndicator);
-        CrossedDownIndicatorRule sma5DownSma60 = new CrossedDownIndicatorRule(sma5, sma60);
-        Rule sellingRule = new AndRule(sarDownClosePrice, sma5DownSma60);
+        CrossedUpIndicatorRule sma7CrossSma25 = new CrossedUpIndicatorRule(sma7, sma25);
+        Rule buyingRule = new OrRule(sarDownClosePrice, sma7CrossSma25);
+        //卖出策略
+        CrossedUpIndicatorRule sarUpClosePrice = new CrossedUpIndicatorRule(parabolicSarIndicator, closePriceIndicator);
+        CrossedDownIndicatorRule sma7DownSma25 = new CrossedDownIndicatorRule(sma7, sma25);
+        Rule sellingRule = new OrRule(sarUpClosePrice, sma7DownSma25);
         //构建策略
         BaseStrategy strategy = new BaseStrategy(buyingRule, sellingRule);
         return strategy;
@@ -138,5 +160,6 @@ public class FinanceTa4jSarStrategy extends FinanceBaseStrategy {
         String symbol = goods.name() + currency.name();
         digitalGoodsTradeService.trade(symbol, OrderSide.SELL, free);
     }
+
 
 }
